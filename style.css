@@ -1,0 +1,97 @@
+#title{
+    text-align: center;
+    font-size: 6em;
+
+}
+
+.text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#greeting{
+    text-align: center;
+}
+h2{
+    font-weight: 500;
+}
+.item{
+    height: 25vh;
+}
+
+hr{
+    border-color: lightcoral;
+    border-top: 1px;
+}
+
+img{
+    max-width: 80vw;
+    height: auto;
+    flex-shrink: 0;
+}
+
+body{
+    font-family: "Caveat", cursive;
+    font-optical-sizing: auto;
+    color: lightcoral;
+    max-width: 100vw;
+}
+
+.container{
+    display: flex;
+    justify-content: space-evenly;
+    color: lightcoral;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+}
+
+canvas{
+    width: 25vh;
+}
+img{
+    height: 25vh;
+}
+
+.text{
+    padding: 0vw 5vw;
+}
+
+.link{
+    text-align: middle;
+    text-decoration: none;
+    color: lightcoral;
+    border: 1px solid lightcoral;
+    padding: 2vh;
+    background-color: antiquewhite;
+    border-radius: 3vh;
+}
+
+@media (orientation: landscape) {
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(0, 0, 0, 0);
+      overflow: hidden; /* Hide overflowing content */
+  
+      /* Target all elements except the message */
+      > *:not(.rotate-message) {
+        display: none;
+      }
+  
+      /* Alternatively, you can use the ::before pseudo-element */
+      &::before {
+        content: "Rotate Device";
+        color: black;
+        font-size: 2em;
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+      }
+    }
+}
